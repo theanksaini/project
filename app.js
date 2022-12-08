@@ -60,7 +60,9 @@ app.post("/register", async (req, res) => {
 		console.log(err);
 	}
 });
-
+app.get("/", function (req, res) {
+  res.send("welcome to site");
+});
 app.post("/login", async (req, res) => {
 	try {
 		const { email, password } = req.body;
